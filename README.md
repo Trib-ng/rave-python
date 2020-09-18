@@ -1,4 +1,12 @@
-# Rave_Python
+<p align="center">
+    <img title="Flutterwave" height="200" src="https://flutterwave.com/images/logo-colored.svg" width="50%"/>
+</p>
+
+# Rave Python Library
+![PyPI](https://img.shields.io/pypi/v/rave_python)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/rave_python)
+![PyPI - License](https://img.shields.io/pypi/l/rave_python)
+
 
 ## Introduction
 This is a Python wrapper around the [API](https://flutterwavedevelopers.readme.io/v2.0/reference) for [Rave by Flutterwave](https://rave.flutterwave.com).
@@ -672,9 +680,9 @@ This is used to facilitate Mpesa transactions.
 <br>
 
 ### ```.charge(payload)```
-This is called to start an Mpesa transaction. The payload should be a dictionary containing account information. It should have the parameters:
+This is called to start an Mpesa transaction. The payload should be a dictionary containing payment information. It should have the parameters:
 
-* ```account```, 
+* ```amount```, 
 
 * ```email```, 
 
