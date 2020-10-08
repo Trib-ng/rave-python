@@ -44,7 +44,6 @@ class Account(Payment):
 
         # setting the endpoint
         endpoint = self._baseUrl + self._endpointMap['account']['charge']
-        feature_name = "Initiate-Account-charge"
 
         # It is faster to just update rather than check if it is already present
         accountDetails.update({'payment_type': 'account'})
@@ -54,10 +53,8 @@ class Account(Payment):
 
         # Checking for required account components
         requiredParameters = ['accountbank', 'accountnumber', 'amount', 'email', 'phonenumber', 'IP']
-
-        return super().charge(feature_name, accountDetails, requiredParameters, endpoint)
+        return super().charge(accountDetails, requiredParameters, endpoint)
 
     def verify(self, txRef):
         endpoint = self._baseUrl + self._endpointMap['account']['verify']
-        feature_name = "Account-charge-verify"
-        return super().verify(feature_name, txRef, endpoint)
+        return super().verify(txRef, endpoint)
