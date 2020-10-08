@@ -13,6 +13,9 @@ class RaveBase(object):
             "bills": {
                 "create":"v2/services/confluence",
             },
+            "banks": {
+                "list_bank": "v2/banks/",
+            },
             "bvn": {
                 "verify": "v2/kyc/bvn/",
             },
@@ -95,6 +98,7 @@ class RaveBase(object):
         
 
         # Setting up public and private keys (private)
+        # 
         # If we are using environment variables to store secretKey
         if(usingEnv):  
             self.__publicKey = publicKey
